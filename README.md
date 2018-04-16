@@ -43,5 +43,8 @@
 - configure TypeScript to treat modules as ESNext modules 
 - allwSyntheticDefaultImports property appears to enable TypeScript to treat CommonJS modules as ESNext modules; 
   allowing use to just use import React from ‘react’.
-  
+
 ## Syntax
+
+
+## Testing
