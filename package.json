@@ -1,0 +1,32 @@
+{
+  "name": "react-ts-webpack",
+  "version": "1.0.0",
+  "description": "- webpack + TypeScript + React         - https://codeburst.io/webpack-typescript-react-part-1-dc154e250f23",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminhuanghuang/react-ts-webpack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminhuanghuang/react-ts-webpack/issues"
+  },
+  "homepage": "https://github.com/benjaminhuanghuang/react-ts-webpack#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.0.0",
+    "typescript": "^2.8.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "dependencies": {
+    "@types/react": "^16.3.11",
+    "@types/react-dom": "^16.0.5",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
+  }
+}
