@@ -19,6 +19,8 @@
   "homepage": "https://github.com/benjaminhuanghuang/react-ts-webpack#readme",
   "devDependencies": {
     "awesome-typescript-loader": "^5.0.0",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3",
     "typescript": "^2.8.1",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14"
@@ -26,6 +28,7 @@
   "dependencies": {
     "@types/react": "^16.3.11",
     "@types/react-dom": "^16.0.5",
+    "antd": "^3.4.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2"
   }

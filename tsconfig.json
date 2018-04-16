@@ -3,6 +3,12 @@
         "noImplicitAny": true,
         "target": "es5",
         "sourceMap": true,
-        "jsx": "react"
-    }
+        "jsx": "react",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+        "node_modules"
+    ],
 }
