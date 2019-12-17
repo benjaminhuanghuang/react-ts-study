@@ -1,0 +1,68 @@
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  
+    .loader-logo {
+      position: absolute;
+      width: 100%;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  
+      @mixin drive-by($approach, $takeoff) {
+        @keyframes drive-by-#{$approach}-#{$takeoff} {
+          0% {
+            transform: translate(#{(-100 - $approach * 30 + '%')}, 0);
+            opacity: 0;
+          }
+  
+          40% {
+            transform: translate(0, 0);
+            opacity: 1;
+          }
+  
+          60% {
+            transform: translate(0, 0);
+            opacity: 1;
+          }
+  
+          100% {
+            transform: translate(#{(100 + $takeoff * 30 + '%')}, 0);
+            opacity: 0;
+          }
+        }
+  
+        animation: drive-by-#{$approach}-#{$takeoff} 2s infinite;
+      }
+  
+      svg {
+        width: 100%;
+        height: 80px;
+        fill: #2ceefb;
+  
+        path {
+          &.one {
+            @include drive-by(2, 4);
+          }
+  
+          &.two {
+            @include drive-by(3, 3);
+          }
+  
+          &.three {
+            @include drive-by(6, 2);
+          }
+  
+          &.four {
+            @include drive-by(7, 2);
+          }
+        }
+      }
+  
+      .label {
+        text-align: center;
+      }
+    }
+  }

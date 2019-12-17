@@ -1,3 +1,5 @@
+# React + TypeScript Learning Project
+
 ## Reference
 -[webpack + TypeScript + React](https://codeburst.io/webpack-typescript-react-part-1-dc154e250f23)
     - https://github.com/larkintuckerllc/webpack-typescript-patterns
@@ -29,7 +31,9 @@
 - allwSyntheticDefaultImports property appears to enable TypeScript to treat CommonJS modules as ESNext modules; 
   allowing use to just use import React from ‘react’.
 
-## Syntax
 
-
-## Testing
+## 
+- Support scss
+```
+npm i -S node-sass
+```

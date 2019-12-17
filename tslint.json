@@ -1,0 +1,16 @@
+{
+    "extends": "awesome-code-style",
+    "rules": {
+      "no-shadowed-variable": false,
+      "variable-name": false,
+      "no-conditional-assignment": true,
+      "no-string-literal": false,
+      "object-literal-shorthand": false,
+      "arrow-return-shorthand": false,
+      "no-unused-variable": false
+    },
+    "linterOptions": {
+      "format": "useful"
+    }
+  }
+  
