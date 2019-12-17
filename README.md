@@ -4,6 +4,7 @@
 -[webpack + TypeScript + React](https://codeburst.io/webpack-typescript-react-part-1-dc154e250f23)
     - https://github.com/larkintuckerllc/webpack-typescript-patterns
 
+-[React Typescript Tutorial - Why and How (get started now!)]()
 
 ## Setup project
 ```

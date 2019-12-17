@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import User from "../../interfaces/user.interface"
 
+import './pokemon-search.scss';
 
 interface SearchState {
     error: boolean,
@@ -49,8 +50,23 @@ export class PokemonSearch extends Component<User, SearchState> {
 
     render() {
         const { name:userName, numberOfPokemons } = this.props;
-        const {error, name, numberOfAbilites, base_expericenc, imageUrl} = this.state;
+        const {error, name, numberOfAbilites, baseExperience, imageUrl} = this.state;
 
+        let result;
+        if(error){
+            result = (
+                <div>
+
+                </div>
+            );
+        }
+        else{
+            result = (
+                <div>
+
+                </div>
+            );
+        }
         return (
             <div>
                 <p>
