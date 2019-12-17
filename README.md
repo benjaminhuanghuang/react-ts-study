@@ -1,9 +1,11 @@
 ## Reference
-    - webpack + TypeScript + React
-        - https://codeburst.io/webpack-typescript-react-part-1-dc154e250f23
-        - https://github.com/larkintuckerllc/webpack-typescript-patterns
+-[webpack + TypeScript + React](https://codeburst.io/webpack-typescript-react-part-1-dc154e250f23)
+    - https://github.com/larkintuckerllc/webpack-typescript-patterns
 
-## Setup
+
+## Setup project
+```
+```
 ```
     npm init
     npm install --save-dev webpack
