@@ -1,16 +1,20 @@
 {
-    "extends": "awesome-code-style",
-    "rules": {
-      "no-shadowed-variable": false,
-      "variable-name": false,
-      "no-conditional-assignment": true,
-      "no-string-literal": false,
-      "object-literal-shorthand": false,
-      "arrow-return-shorthand": false,
-      "no-unused-variable": false
-    },
-    "linterOptions": {
-      "format": "useful"
-    }
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslintconfig-prettier"
+  ],
+  "rules": {
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-debugger": false,
+    "no-console": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
+    ]
   }
-  
+}

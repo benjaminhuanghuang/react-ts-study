@@ -30,7 +30,7 @@
 - null: Represents no value
 
 ## TypeScript types
-- Any
+- Any / unknown
 ```
   function test(name): any{
       console.log(name)
@@ -122,3 +122,12 @@ let strLength = (str as string).length
 let str: any = 'I am a String'
 let strLength = (<string>str).length
 此代码块与上面的代码块具有完全相同的功能。它只是语法不同。
+
+
+
+## Reference
+- Basic types: https://www.typescriptlang.org/docs/handbook/basic-types.html
+- Interfaces: https://www.typescriptlang.org/docs/handbook/interfaces.html
+- Classes: https://www.typescriptlang.org/docs/handbook/classes.html
+- Modules: https://www.typescriptlang.org/docs/handbook/modules.html
+- Compiler Options: https://www.typescriptlang.org/docs/handbook/compiler-options.html

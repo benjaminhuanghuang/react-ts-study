@@ -1,6 +1,7 @@
 ## Typescript setup
 ```
-npm install -g typescript
+    sudo npm install -g typescript
+    tsc -v
 ```
 
 
@@ -35,3 +36,8 @@ npm install -g typescript
 
 
 ## VS code extension
+- TSLint
+```
+    npm install tslint tslint-react tslint-config-prettier --savedev
+```
+- Prettier - Code formatter
