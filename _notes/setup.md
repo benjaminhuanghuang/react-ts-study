@@ -34,4 +34,4 @@ npm install -g typescript
 
 
 
-## Types
+## VS code extension
