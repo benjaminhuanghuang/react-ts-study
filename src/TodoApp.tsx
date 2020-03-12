@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 
 type FormElem = React.FormEvent<HTMLFormElement>;
 
@@ -21,8 +21,14 @@ export default function TodoApp(): JSX.Element {
     setValue("");
   };
 
-  const addTodo = (text: string) => {
+  const addTodo = (text: string): void => {
     const newTodos: ITodo[] = [...todos, { text, complete: false }];
+    setTodos(newTodos);
+  };
+
+  const completeTodo = (index: number): void => {
+    const newTodos: ITodo[] = [...todos];    // DO NOT use newTodos = todos here
+    newTodos[index].complete = !newTodos[index].complete;
     setTodos(newTodos);
   };
   return (
@@ -38,9 +44,14 @@ export default function TodoApp(): JSX.Element {
         <button type="submit"> Add Todo</button>
       </form>
       <section>
-        {todos.map((todo: ITodo, i: number) => {
-          return <div key={i}>{todo.text}</div>;
-        })}
+        {todos.map((todo: ITodo, i: number) => (
+          <Fragment key={i}>
+            <div style={{textDecoration: todo.complete? 'line-through':''}}>{todo.text}</div>
+            <button type="button" onClick={() => completeTodo(i)}>
+              {todo.complete ? "Inclomplete" : "Complete"}
+            </button>
+          </Fragment>
+        ))}
       </section>
     </>
   );
