@@ -31,6 +31,13 @@ export default function TodoApp(): JSX.Element {
     newTodos[index].complete = !newTodos[index].complete;
     setTodos(newTodos);
   };
+
+  const removeTodo = (index: number): void => {
+    const newTodos: ITodo[] = [...todos];    // DO NOT use newTodos = todos here
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+
   return (
     <>
       <h1>Todo List</h1>
@@ -49,6 +56,9 @@ export default function TodoApp(): JSX.Element {
             <div style={{textDecoration: todo.complete? 'line-through':''}}>{todo.text}</div>
             <button type="button" onClick={() => completeTodo(i)}>
               {todo.complete ? "Inclomplete" : "Complete"}
+            </button>
+            <button type="button" onClick={() => removeTodo(i)}>
+              &times;
             </button>
           </Fragment>
         ))}
