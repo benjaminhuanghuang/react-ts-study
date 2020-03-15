@@ -1,9 +1,9 @@
-export interface IAction{
-  type: string
-  payload: any
+export interface IAction {
+  type: string;
+  payload: any;
 }
 export interface IState {
-  episodes:  Array<IEpisode>;
+  episodes: Array<IEpisode>;
   favorites: Array<any>;
 }
 
@@ -19,4 +19,10 @@ export interface IEpisode {
   season: string;
   summary: string;
   url: string;
+}
+
+export interface IEpisodeProps {
+  episodes: Array<IEpisode>;
+  toggleFavAction: (episode: IEpisode) => IAction;
+  favorites: Array<IEpisode>;
 }
