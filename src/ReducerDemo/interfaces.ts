@@ -3,11 +3,11 @@ export interface IAction{
   payload: any
 }
 export interface IState {
-  episodes:  Array<IEepisode>;
+  episodes:  Array<IEpisode>;
   favorites: Array<any>;
 }
 
-export interface IEepisode {
+export interface IEpisode {
   airdate: string;
   airstamp: string;
   airtime: string;

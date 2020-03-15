@@ -1,15 +1,16 @@
 import React from "react";
 
 import { Store, StoreProvider } from "./ReducerDemoAppStore";
-import { IAction, IEepisode } from "./interfaces";
+import { IAction, IEpisode } from "./interfaces";
 
 import "./ReducerDemoApp.css";
+
+const EpisodeList = React.lazy<any>(() => import("./EpisodesList"));
 
 function RecuderDemoApp(): JSX.Element {
   const { state, dispatch } = React.useContext(Store);
 
   React.useEffect(() => {
-    debugger;
     state.episodes.length === 0 && fetchDataAction();
   });
 
@@ -24,7 +25,7 @@ function RecuderDemoApp(): JSX.Element {
     });
   };
 
-  const toggleFavAction = (episode: IEepisode): IAction => {
+  const toggleFavAction = (episode: IEpisode): IAction => {
     const episodeInFav = state.favorites.includes(episode);
     let dispatchObj = {
       type: "ADD_FAV",
@@ -32,7 +33,7 @@ function RecuderDemoApp(): JSX.Element {
     };
     if (episodeInFav) {
       const favWithoutEpisode = state.favorites.filter(
-        (fav: IEepisode) => fav.id !== episode.id
+        (fav: IEpisode) => fav.id !== episode.id
       );
       dispatchObj = {
         type: "REMOVE_FAV",
@@ -41,8 +42,12 @@ function RecuderDemoApp(): JSX.Element {
     }
     return dispatch(dispatchObj);
   };
-
-  console.log();
+  const props = {
+    episodes: state.episodes,
+    toggleFavAction,
+    favorites: state.favorites
+  };
+  // console.log();
   return (
     <>
       <header className="header">
@@ -50,34 +55,13 @@ function RecuderDemoApp(): JSX.Element {
           <h1>Rick and Morty</h1>
           <p>Pick your favorite episode!!!</p>
         </div>
-        <div>
-          Farorite(s): {state.favorites.length}
-        </div>
+        <div>Farorite(s): {state.favorites.length}</div>
       </header>
-      <section className="episode-layout">
-        {state.episodes.map((episode: any) => {
-          return (
-            <section className="episode-box" key={episode.id}>
-              <img
-                src={episode.image.medium}
-                alt={`Rick and Mort ${episode.name}`}
-              />
-              <div>{episode.name}</div>
-              <section>
-                <div>Seasion: {episode.season} </div>
-                <div>Number: {episode.number}</div>
-                <button type="button" onClick={() => toggleFavAction(episode)}>
-                  {state.favorites.find(
-                    (fav: IEepisode) => fav.id === episode.id
-                  )
-                    ? "Unfav"
-                    : "Fav"}
-                </button>
-              </section>
-            </section>
-          );
-        })}
-      </section>
+      <React.Suspense fallback={<div>Loading</div>}>
+        <section className="episode-layout">
+          <EpisodeList {...props} />
+        </section>
+      </React.Suspense>
     </>
   );
 }
