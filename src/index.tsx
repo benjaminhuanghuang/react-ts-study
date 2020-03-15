@@ -8,7 +8,7 @@ import { App } from "./App";
 import TodoApp from "./TodoApp";
 import ContextDemoApp from "./ContextDemoApp";
 import ReducerHookDemoApp from "./ReducerHookDemoApp";
-import ReducerDemoApp from "./ReducerDemoApp";
+import ReducerDemoApp from "./ReducerDemo/ReducerDemoApp";
 
 ReactDOM.render(<ReducerDemoApp />, document.getElementById("root"));
 

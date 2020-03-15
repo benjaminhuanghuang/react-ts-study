@@ -1,0 +1,22 @@
+
+
+.episode-layout{
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100wh
+}
+
+.episode-box{
+  padding: 0.5rem
+}
+
+.header{
+  display:flex;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid blacl;
+  padding: 0.5rem;
+  position: sticky;
+  top:0;
+}
+
