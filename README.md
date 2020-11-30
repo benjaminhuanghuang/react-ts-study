@@ -1,10 +1,16 @@
 # React + TypeScript Learning Project
 
 
+## Technique
+- React Hooks
+- Redux Hooks, Redux Thunks, redux-devtools-extension
+- Router, Auth
+- Project folder stucture
 
-## To be learn
-- UT
 - Form + validation
 - Multi-step form
-- Router
 - Blueprint
+- styled-component
+
+- UT
+
